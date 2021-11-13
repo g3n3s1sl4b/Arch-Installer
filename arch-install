@@ -1634,7 +1634,6 @@ setup_extra_packages()
   ipython 
   irssi
   lsof 
-  mesa 
   mlocate 
   moreutils 
   mpv 
