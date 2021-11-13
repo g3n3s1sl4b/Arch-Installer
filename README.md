@@ -12,10 +12,10 @@ yay -S arch-installer
 ### Using the git version
 
 ```bash
-1) git clone https://github.com/FollowMeDown/arch-installer.git
-2) cp -R arch-installer/ /usr/share/
-3) ln -sf /usr/share/arch-installer/arch-install /usr/bin/
-4) chmod +x /usr/bin/arch-install
+git clone https://github.com/FollowMeDown/arch-installer.git
+cp -R arch-installer/ /usr/share/
+ln -sf /usr/share/arch-installer/arch-install /usr/bin/
+chmod +x /usr/bin/arch-install
 ```
 
 ## Usage
