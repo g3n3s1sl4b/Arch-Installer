@@ -1669,6 +1669,8 @@ setup_extra_packages()
 
   network='
   networkmanager
+  nm-connection-editor
+  network-manager-applet
   crda
   netsniff-ng
   iftop
