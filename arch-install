@@ -1770,7 +1770,7 @@ setup_extra_packages()
   warn 'This can take a while, please wait...'
   printf "\n"
 
-  chroot $CHROOT pacman -S --overwrite='*' --needed --noconfirm $ALL > $VERBOSE 2>&1
+  chroot $CHROOT pacman -S $ALL
  
   sleep "$DELAY_1"
 
@@ -1843,9 +1843,9 @@ enable_iwd_networkd()
   printf "\n\n"
 
   chroot $CHROOT systemctl enable iwd > $VERBOSE 2>&1
-  chroot $CHROOT systemctl enable libvirtd > $VERBOSE 2>&1
+  #chroot $CHROOT systemctl enable libvirtd > $VERBOSE 2>&1
   chroot $CHROOT systemctl enable systemd-networkd > $VERBOSE 2>&1
-  chroot $CHROOT systemctl enable sshd systemd-networkd > $VERBOSE 2>&1
+  chroot $CHROOT systemctl enable sshd > $VERBOSE 2>&1
 
   return $SUCCESS
 }
