@@ -1764,38 +1764,7 @@ setup_extra_packages()
   warn 'This can take a while, please wait...'
   printf "\n"
 
-  chroot $CHROOT pacman -S $arch --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "1\n"
-  chroot $CHROOT pacman -S $browser --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "2\n"
-  chroot $CHROOT pacman -S $bluetooth --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "3\n"
-  chroot $CHROOT pacman -S $editor --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "4\n"
-  chroot $CHROOT pacman -S $filesystem --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "5\n"
-  chroot $CHROOT pacman -S $fonts --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "6\n"
-  chroot $CHROOT pacman -S $hardware --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "7\n"
-  chroot $CHROOT pacman -S $kernel --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "8\n"
-  chroot $CHROOT pacman -S $misc --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "9\n"
-  chroot $CHROOT pacman -S $network --overwrite='*' --needed
-  sleep "$DELAY_10"
-  printf "10\n"
-  chroot $CHROOT pacman -S $xorg --overwrite='*' --needed
-  sleep "$DELAY_10"
+  chroot $CHROOT pacman -S $arch --overwrite='*' --needed $ALL
   
   return $SUCCESS
 }
