@@ -1,5 +1,5 @@
 [Match]
-Name=ww*
+Name=wl*
 
 [Network]
 DHCP=ipv4
