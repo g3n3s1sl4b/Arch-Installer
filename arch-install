@@ -1558,7 +1558,9 @@ setup_extra_packages()
   nodejs
   yarn
   npm
-  go'
+  go
+  python2
+  python2-setuptools'
   
   arch='
   aurpublish
