@@ -19,7 +19,7 @@ FALSE=1
 SUCCESS=0
 FAILURE=1
 
-#install delay
+# install delay
 DELAY_1="1"
 DELAY_10="10"
 
@@ -1571,8 +1571,7 @@ setup_extra_packages()
   bluez-tools 
   bluez-utils'
 
-  browser='
-  firefox'
+  browser=''
 
   editor='
   leafpad
@@ -1590,7 +1589,6 @@ setup_extra_packages()
   
   hardware='
   bridge-utils
-  qemu
   rfkill
   intel-ucode'
 
@@ -1692,10 +1690,12 @@ setup_extra_packages()
   dnsutils 
   gnu-netcat 
   iw
-  iwd 
+  iwd
+  inetutils
   nfs-utils 
   ntp 
-  openconnect 
+  openconnect
+  nmap
   openssh 
   openvpn 
   socat 
@@ -1730,9 +1730,7 @@ setup_extra_packages()
   dialog
   cmake
   net-tools 
-  wget 
-  inetutils
-  nmap'
+  wget'
 
   if [ "$INSTALL_MODE" != "gui" ]
   then
@@ -1770,10 +1768,40 @@ setup_extra_packages()
   warn 'This can take a while, please wait...'
   printf "\n"
 
-  chroot $CHROOT pacman -S $ALL
- 
-  sleep "$DELAY_1"
-
+  chroot $CHROOT pacman -S $arch
+  sleep "$DELAY_10"
+  printf "1\n"
+  chroot $CHROOT pacman -S $browser
+  sleep "$DELAY_10"
+  printf "2\n"
+  chroot $CHROOT pacman -S $bluetooth
+  sleep "$DELAY_10"
+  printf "3\n"
+  chroot $CHROOT pacman -S $editor
+  sleep "$DELAY_10"
+  printf "4\n"
+  chroot $CHROOT pacman -S $filesystem
+  sleep "$DELAY_10"
+  printf "5\n"
+  chroot $CHROOT pacman -S $fonts
+  sleep "$DELAY_10"
+  printf "6\n"
+  chroot $CHROOT pacman -S $hardware
+  sleep "$DELAY_10"
+  printf "7\n"
+  chroot $CHROOT pacman -S $kernel
+  sleep "$DELAY_10"
+  printf "8\n"
+  chroot $CHROOT pacman -S $misc
+  sleep "$DELAY_10"
+  printf "9\n"
+  chroot $CHROOT pacman -S $network
+  sleep "$DELAY_10"
+  printf "10\n"
+  chroot $CHROOT pacman -S $xorg
+  sleep "$DELAY_10"
+  printf "11\n"
+  
   return $SUCCESS
 }
 
