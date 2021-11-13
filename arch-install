@@ -1843,6 +1843,7 @@ enable_iwd_networkd()
   chroot $CHROOT systemctl enable iwd > $VERBOSE 2>&1
   chroot $CHROOT systemctl enable systemd-networkd > $VERBOSE 2>&1
   chroot $CHROOT systemctl enable sshd > $VERBOSE 2>&1
+  chroot $CHROOT systemctl enable libvird > $VERBOSE 2>&1
 
   return $SUCCESS
 }
