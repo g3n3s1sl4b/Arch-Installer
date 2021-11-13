@@ -126,7 +126,7 @@ ROOT_FS_TYPE=''
 CHROOT='/mnt'
 
 # normal system user
-NORMAL_USER='deface'
+NORMAL_USER=''
 
 # default ArchLinux repository URL
 ARCH_REPO_URL="http://mirror.archlinux.guru/archlinux/\$repo/os/\$arch"
