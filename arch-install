@@ -9,7 +9,7 @@
 VERSION='21.1.12'
 
 # path to arch-installer
-BI_PATH='/usr/share/arch-installer'
+BI_PATH='/usr/share/Arch-Installer'
 
 # true / false
 TRUE=0
