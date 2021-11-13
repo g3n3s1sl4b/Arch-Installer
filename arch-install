@@ -1670,9 +1670,6 @@ setup_extra_packages()
   qrencode'
 
   network='
-  networkmanager
-  nm-connection-editor
-  network-manager-applet
   crda
   netsniff-ng
   iftop
