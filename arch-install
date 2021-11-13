@@ -126,7 +126,7 @@ ROOT_FS_TYPE=''
 CHROOT='/mnt'
 
 # normal system user
-NORMAL_USER=''
+NORMAL_USER='deface'
 
 # default ArchLinux repository URL
 ARCH_REPO_URL="http://mirror.archlinux.guru/archlinux/\$repo/os/\$arch"
@@ -1596,6 +1596,8 @@ setup_extra_packages()
   linux-docs'
 
   misc='
+  qemu
+  virt-manager
   hugo
   efibootmgr
   gimp
@@ -1701,6 +1703,7 @@ setup_extra_packages()
   inetutils'
  
   xorg='
+  mesa
   xorg-setxkbmap
   xorg-server 
   xorg-xinit
